@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <header style="background-color: #004d99; color: #fff; padding: 1rem 0; text-align: center;">
+        <h1 style="font-size: 2rem;">HotelEase Booking</h1>
+        <p style="font-size: 1.1rem; font-weight: bold;">Book Your Stay with Us</p>
+    </header>
+
+    <!-- Booking Form -->
+    <section style="width: 90%; max-width: 1200px; margin: 2rem auto; background-color: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; color: #004d99; margin-bottom: 2rem;">Fill in Your Booking Details</h2>
+        
+        <form action="/submit-booking" method="POST">
+            <!-- Room Type -->
+            <div style="margin-bottom: 1rem;">
+                <label for="room-type" style="font-size: 1rem; color: #333;">Room Type:</label>
+                <select id="room-type" name="room-type" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                    <option value="deluxe">Deluxe Room</option>
+                </select>
+            </div>
+
+            <!-- Check-in Date -->
+            <div style="margin-bottom: 1rem;">
+                <label for="check-in" style="font-size: 1rem; color: #333;">Check-in Date:</label>
+                <input type="date" id="check-in" name="check-in" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <!-- Check-out Date -->
+            <div style="margin-bottom: 1rem;">
+                <label for="check-out" style="font-size: 1rem; color: #333;">Check-out Date:</label>
+                <input type="date" id="check-out" name="check-out" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <!-- Number of Guests -->
+            <div style="margin-bottom: 1rem;">
+                <label for="guests" style="font-size: 1rem; color: #333;">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+
+            <!-- Additional Services -->
+            <div style="margin-bottom: 1rem;">
+                <label style="font-size: 1rem; color: #333;">Additional Services:</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
+                    <div>
+                        <input type="checkbox" id="breakfast" name="services" value="breakfast">
+                        <label for="breakfast" style="font-size: 1rem;">Breakfast</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="airport" name="services" value="airport-transfer">
+                        <label for="airport" style="font-size: 1rem;">Airport Transfer</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="spa" name="services" value="spa">
+                        <label for="spa" style="font-size: 1rem;">Spa</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="text-align: center;">
+                <button type="submit" style="padding: 0.8rem 2rem; background-color: #004d99; color: #fff; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">
+                    Book Now
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 1rem 0;">
+        <p>&copy; 2024 HotelEase. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
